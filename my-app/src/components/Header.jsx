@@ -6,6 +6,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
+
 const Header = ({ isAuthenticated, user }) => {
   return (
     <AppBar position="static">

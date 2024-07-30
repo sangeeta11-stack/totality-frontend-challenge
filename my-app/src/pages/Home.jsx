@@ -1,16 +1,23 @@
 
-import React from 'react';
-import { Typography } from '@mui/material';
+import React, { useState } from 'react';
+
+import Filter from '../components/Filters';
+import PropertyList from '../components/PropertyList';
+
 
 const Home = () => {
+  const [filters, setFilters] = useState({});
+
+  const applyFilters = (filterValues) => {
+    setFilters(filterValues);
+    // Fetch or filter the properties based on the filters here
+  };
+
   return (
-    <div>
-      <Typography variant="h3" gutterBottom>
-        Welcome to the Property Rental Platform
-      </Typography>
-      <Typography variant="body1">
-        Browse and book the best properties in your desired location.
-      </Typography>
+    <div className="home-page">
+      <Filter onFilter={applyFilters} />
+      <PropertyList filters={filters} />
+      <PropertyList />
     </div>
   );
 };
