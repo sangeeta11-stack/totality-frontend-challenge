@@ -17,8 +17,8 @@ const App = () => {
         <Header />
         <Home/>
       <About/>
-      <PropertyList/>
       <PopularAreas/>
+      <PropertyList/>
       <Contact/>
       <Footer/>
       </DarkModeProvider>
